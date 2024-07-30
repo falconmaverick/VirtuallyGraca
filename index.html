@@ -44,5 +44,26 @@
         <p>&copy; 2024 Virtually by Graca</p>
     </footer>
     <script src="scripts.js"></script>
+
+    <!-- Dialogflow Chatbot Integration -->
+    <script>
+        window.onload = function() {
+            var chatbox = document.createElement('div');
+            chatbox.id = 'df-chat';
+            chatbox.style.position = 'fixed';
+            chatbox.style.bottom = '20px';
+            chatbox.style.right = '20px';
+            chatbox.style.width = '300px';
+            chatbox.style.height = '400px';
+            document.body.appendChild(chatbox);
+
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://console.dialogflow.com/api-client/demo/embedded/your-agent-id'; // Replace 'your-agent-id' with your Dialogflow agent ID
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.border = 'none';
+            chatbox.appendChild(iframe);
+        };
+    </script>
 </body>
 </html>
